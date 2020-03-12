@@ -1,0 +1,26 @@
+@mixin mq($width) {
+  @media only screen and (max-width: $width * 1px) {
+      @content;
+  }
+}
+
+@mixin mqm($width) {
+  @media only screen and (min-width: $width * 1px) {
+      @content;
+  }
+}
+
+
+
+@mixin mm($font-size : 16,  $line-height: normal, $font-weight: normal, $letter-spacing: normal ) {
+  font-family: 'Montserat-Regular';
+  font-size: $font-size * 1px;
+  line-height: $line-height * 1px;
+  font-weight: $font-weight;
+  @if ($letter-spacing != normal) {
+      letter-spacing: $letter-spacing * 1px;
+  }
+  @else {
+      letter-spacing: $letter-spacing;
+  }
+}

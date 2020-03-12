@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import '/assets/scss/_mixin';
+
+@import '/assets/scss/_variables.scss';
+
+
+@font-face {
+  font-family: "Montserat-Regular";
+  font-display: auto;
+  src: url("/assets/fonts/montserrat/montserrat.ttf") format("opentype");
+}
+
+
+body{
+  margin: 0;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-fluid{
+  display: flex;
+  @include mq($q11){
+    flex-wrap: wrap;
+  }
+}
